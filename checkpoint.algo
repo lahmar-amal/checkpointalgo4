@@ -1,0 +1,22 @@
+ALGORITHM insertion sort
+VAR
+    set_declarations
+    arr : ARRAY_OF INTEGER[20];
+    i,j,n,a : INTEGER;
+
+BEGIN
+    n := len(arr)-1;
+    
+    FOR i FROM 2 TO n STEP 1 DO
+        a:= arr[i];
+        j:=i ;
+        WHILE (arr[j-1]>a) DO
+            arr[j]:= arr[j-1];
+            j:=j-1;
+            
+        END_WHILE
+        
+        arr[j]:=a;
+        
+    END_FOR
+END
